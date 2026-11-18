@@ -16,7 +16,7 @@ College students frequently need affordable textbooks, scientific calculators, t
 
 ## 🚀 Live Demo & Links
 
-- **Live Deployed Website:** [https://student-xchange-nextjs-project.vercel.app](https://student-xchange-nextjs-project.vercel.app)
+- **Live Deployed Website:** [https://second-hand-marketplace-nextjs-proj.vercel.app](https://second-hand-marketplace-nextjs-proj.vercel.app)
 - **GitHub Repository:** [https://github.com/anshp2931-gif/second-hand-marketplace_nextjs-project](https://github.com/anshp2931-gif/second-hand-marketplace_nextjs-project)
 - **Deployment Platform:** Vercel
 
