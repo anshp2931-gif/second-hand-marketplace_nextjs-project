@@ -65,9 +65,9 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-xl tracking-tight text-slate-900 leading-none">
-                Market<span className="text-emerald-600">place</span>
+                Student<span className="text-emerald-600">Xchange</span>
               </span>
-              <span className="text-[10px] font-medium text-slate-500 uppercase tracking-wider">Students</span>
+              <span className="text-[10px] font-medium text-slate-500 uppercase tracking-wider">Campus Market</span>
             </div>
           </Link>
 

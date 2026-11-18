@@ -1,4 +1,4 @@
-# Marketplace Students 🎓📦
+# StudentXchange 🎓📦
 
 > **A modern, student-focused second-hand marketplace web application built with Next.js App Router, Tailwind CSS, and MongoDB Atlas.**
 
