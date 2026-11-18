@@ -1,8 +1,15 @@
 import mongoose from 'mongoose';
 
-const MONGODB_URI =
+const rawUri =
   process.env.MONGODB_URI ||
   'mongodb+srv://anshpatel1:anshpatel1@clusteransh.sgufmbi.mongodb.net/studentxchange?retryWrites=true&w=majority';
+
+// Ensure database name is always studentxchange
+const MONGODB_URI = rawUri.includes('studentxchange')
+  ? rawUri
+  : rawUri.endsWith('/')
+  ? `${rawUri}studentxchange?retryWrites=true&w=majority`
+  : `${rawUri}/studentxchange?retryWrites=true&w=majority`;
 
 interface CachedConnection {
   conn: typeof mongoose | null;
@@ -21,18 +28,19 @@ if (!global.mongooseCache) {
 }
 
 export async function connectToDatabase(): Promise<typeof mongoose> {
-  if (cached.conn) {
+  if (cached.conn && cached.conn.connection.readyState === 1) {
     return cached.conn;
   }
 
   if (!cached.promise) {
     const opts = {
+      dbName: 'studentxchange',
       bufferCommands: false,
-      serverSelectionTimeoutMS: 10000,
+      serverSelectionTimeoutMS: 5000,
     };
 
     cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongooseInstance) => {
-      console.log('MongoDB connected successfully via Atlas');
+      console.log('MongoDB connected successfully to studentxchange db');
       return mongooseInstance;
     });
   }
