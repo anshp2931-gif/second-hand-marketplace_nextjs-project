@@ -15,7 +15,7 @@ app.use('/api/offers', offerRoutes);
 app.use('/api/seed', seedRoutes);
 
 app.get('/', (req, res) => {
-  res.send('StudentXchange Backend API is running...');
+  res.send('Marketplace Students Backend API is running...');
 });
 
 module.exports = app;
