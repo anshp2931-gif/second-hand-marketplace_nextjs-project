@@ -3,6 +3,8 @@ import { connectToDatabase } from '@/lib/db';
 import Offer from '@/models/Offer';
 import '@/models/Listing';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
   try {
     await connectToDatabase();
